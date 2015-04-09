@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<nav class="navmenu navmenu-inverse navmenu-fixed-left" role="navigation">
+    <a class="navmenu-brand text-center" href="{% url 'home' %}"><img src="{% static 'index/logo.png' %}" alt=""/></a>
+
+    <ul class="nav navmenu-nav">
+        <li class="active"><a href="{% url 'home' %}">Index</a></li>
+
+        {% if user.is_authenticated %}
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Expensions <b class="caret"></b></a>
+                <ul class="dropdown-menu navmenu-nav" role="menu">
+                    <li><a href="{% url 'expense' %}">List</a></li>
+                    <li><a href="{% url 'expense_create' %}">Add</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Logged as {{ user.username }} <b
+                        class="caret"></b></a>
+                <ul class="dropdown-menu navmenu-nav" role="menu">
+                    <li><a href="{% url 'logout' next='expense' %}">Logout</a></li>
+                </ul>
+            </li>
+        {% else %}
+            <li class="active"><a href="{% url 'login' %}">Sign In</a></li>
+        {% endif %}
+    </ul>
+</nav>

@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coinzaur</title>
+
+    <link rel="stylesheet" href="{% static 'all.css' %}"/>
+    <link rel="stylesheet" href="{% static 'index/menu.css' %}"/>
+    <script src="{% static 'all.js' %}"></script>
+</head>
+<body>
+{% include 'index/menu.html' %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

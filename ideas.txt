@@ -1,0 +1,32 @@
+# General
+Project allows the user to create his own list of expenses.
+Compare it between time periods, look through expense graphs.
+
+# In-Depth
+Each user is allowed to:
+- store informations about his expenses,
+- divide expenses to custom products,
+- create custom tags for expenses,
+- search through them
+- compare time periods to calculate the difference.
+
+Interface would generate graphs based on data present in the database.
+
+User would be able to set profile information as:
+- income periods (weekly, monthly) which sets the application to divide expenses between each income
+- income amount
+- currency
+
+Libraries / Frameworks:
+- Django
+-- Django_extensions
+-- django-crispy-forms
+-- django-parsley
+-- django-bootstrap3
+-- factory_boy
+- Frontend (HTML/JS)
+-- Bootstrap3
+-- Chart.js
+-- Parsley.js
+
+Full localization capability (timezone, language, formatting)

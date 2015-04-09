@@ -1,0 +1,23 @@
+{
+  "name": "django-coinzaur",
+  "version": "0.0.0",
+  "authors": [
+    "Dawid Wołosowicz"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "bootstrap": "~3.3.4",
+    "jasny-bootstrap": "~3.1.3"
+  }
+}
