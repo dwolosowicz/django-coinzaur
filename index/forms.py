@@ -7,3 +7,6 @@ class ExpenseForm(forms.ModelForm):
     class Meta:
         model = Expense
         fields = ('title', 'total_cost', 'tags')
+
+    tags = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ''}))
+

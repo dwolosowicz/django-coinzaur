@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'expenses.CoinzaurUser'
+AUTH_USER_MODEL = 'coinzaur.CoinzaurUser'
 
 # Application definition
 
@@ -42,7 +42,9 @@ INSTALLED_APPS = (
     'bootstrap3',
     'crispy_forms',
     'timezone_field',
+    'taggit',
     'parsley',
+    'coinzaur',
     'expenses',
     'index'
 )
@@ -113,3 +115,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = ('build',)
+
+LOGIN_URL = '/login'

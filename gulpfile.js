@@ -11,7 +11,8 @@ gulp.task('default', function() {
         'bower_components/underscore/underscore.js',
         'bower_components/jquery/dist/jquery.js',
         'bower_components/bootstrap/dist/js/bootstrap.js',
-        'bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js'
+        'bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js',
+        'bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js'
     ])
       .pipe(uglify())
       .pipe(concat(CONCAT_FILE_NAME + '.js'))
@@ -20,6 +21,7 @@ gulp.task('default', function() {
     gulp.src([
         'bower_components/bootstrap/dist/css/bootstrap.css',
         'bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css',
+        'bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css'
     ])
       .pipe(minifyCSS())
       .pipe(concat(CONCAT_FILE_NAME + '.css'))

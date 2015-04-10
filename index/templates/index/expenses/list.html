@@ -1,5 +1,18 @@
 {% extends 'index/base.html' %}
 
 {% block content %}
+    <h2>Your expenses</h2>
 
+    <hr />
+
+    <table class="table table-bordered">
+        {% for expense in expenses %}
+            <tr>
+                <td>{{ expense.title }}</td>
+                <td>{{ expense.total_cost }}</td>
+                <td>{{ expense.products_cost }}</td>
+                <td>{{ expense.not_specified_cost }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

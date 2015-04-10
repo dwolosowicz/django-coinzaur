@@ -29,5 +29,4 @@ class AuthorableTestCase(BehaviorTestCaseMixin):
         author = mommy.make(get_user_model())
         obj = self.create_instance(author=author)
 
-
         self.assertIn(obj, self.get_model().objects.by_author(author))

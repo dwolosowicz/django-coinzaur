@@ -1,16 +1,8 @@
 from django.db import models
-from django_extensions.db import fields
 
-from .auth import CoinzaurUser
+from taggit.managers import TaggableManager
+
 from common.behaviors import Timestampable, Authorable
-
-
-class Tag(Timestampable, Authorable, models.Model):
-    class Meta:
-        verbose_name = "Tag"
-        verbose_name_plural = "Tags"
-
-    label = models.CharField(max_length=255)
 
 
 class Expense(Timestampable, Authorable, models.Model):
@@ -18,7 +10,7 @@ class Expense(Timestampable, Authorable, models.Model):
         verbose_name = "Expense"
         verbose_name_plural = "Expenses"
 
-    tags = models.ManyToManyField(Tag)
+    tags = TaggableManager()
 
     title = models.CharField(max_length=255)
     total_cost = models.DecimalField(max_digits=10, decimal_places=2)
